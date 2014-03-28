@@ -1,0 +1,13 @@
+%title 关于我
+
+基本上，是个 C 程序员
+
+----
+
+一些链接
+* [[http://www.douban.com/people/nirocfz/|豆瓣]]
+* [[https://github.com/nirocfz|Github]]
+* [[http://blog.mark42.net|博客：月亮和六便士]]
+
+Email: chenfzh AT gmail.com
+

@@ -1,0 +1,16 @@
+==== Ubuntu 12.04 (LTS 发行版) 安装新内核 ====
+以 12.04.4 为例
+
+{{{
+sudo apt-get install --install-recommends linux-generic-lts-saucy xserver-xorg-lts-saucy libgl1-mesa-glx-lts-saucy
+}}}
+
+其中 saucy 是 Ubuntu 13.10 的名字。12.04.3 对应的是 Raring (13.04)，依此类推。
+详情：[[https://wiki.ubuntu.com/Kernel/LTSEnablementStack|LTSEnablementStack]]
+
+==== 更新完系统，是否需要更新 ====
+`cat /var/run/reboot-required` 可以看到系统是否需要重启
+
+`cat /var/run/reboot-required.pkgs` 可以看到是那些软件更新后需要重启系统
+
+详情：[[http://askubuntu.com/questions/28530/how-can-i-tell-what-package-requires-a-reboot-of-my-system|How can I tell what package requires a reboot of my system?]]
