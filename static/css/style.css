@@ -1,5 +1,14 @@
 h1, h2, h3, h4, h5, h6 {font-weight: bold; line-height:1.5; margin-top: 1.0em; margin-bottom: 0.5em;}
 pre, code {font-size: 100%;}
+body,
+input,
+button,
+select,
+textarea,
+.navbar-search .search-query {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+
 .toc li {list-style-type: none;}
 .todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}
 .justleft {text-align: left;}
