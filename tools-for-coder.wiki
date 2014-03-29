@@ -1,0 +1,20 @@
+%title 开发相关工具
+
+==== 查看网页在不同设备上的显示效果 ====
+* [[http://www.responsinator.com|Responsinator]]
+* [[http://quirktools.com/screenfly|Screenfly]]
+
+==== 网站测速 ====
+* 多种测试(http, ping, dns, trace)
+    * [[http://alibench.com|阿里测]] 不知道跟阿里巴巴有没有关系
+    * [[http://17ce.com|17CE]]
+* DNS
+    * [[http://tools.fastweb.com.cn/index.php/Index/Mdig|快网工具]] 线路非常多，可以指定线路
+    * [[http://www.intodns.com/|intoDNS: checks DNS and mail servers health]]
+
+==== IP 相关 ====
+* [[http://ip138.com|IP138]]
+* [[http://ipseeker.cn/|界面很蹉的“IP地址探索者”]]
+* 新浪接口 http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=1.1.1.1
+* [[http://ip.taobao.com/|淘宝IP地址库]]
+* [[http://tool.17mon.cn/|17MON网络工具集]] [[http://tool.17mon.cn/ipgeo.php|IP 数据库分享计划]]

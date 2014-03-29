@@ -1,0 +1,21 @@
+%title Noodles 的维基
+
+==== 为什么使用 vimwiki ====
+我找了一圈，发现 vimwiki 的确是最好的一个
+* 太多东西需要记，但是最近发现脑子不好使了
+* 有些内容既不适合发布到博客，也不适合乱糟糟地就扔到 evernote，evernote 已经乱得不行了
+* 以前我觉得 vimwiki 太丑，现在我不在意丑不丑了
+* 其他的 wiki 软件/系统也很丑，而且我自己不能让它变好看
+
+----
+
+*我还缺少一个 favicon*
+
+
+[[bookmarks|书签]]
+
+[[tv|电视剧]]
+
+[[things-worth-paying-for|好东西]]
+
+[[software-development|码农]]

@@ -1,0 +1,29 @@
+%template code
+%title Code
+
+现在这里是个测试页面，看一下代码显示效果
+
+代码高亮由 [[http://highlightjs.org|highlight.js]] 实现
+
+{{{class="python"
+def hello(world):
+    for x in range(10):
+        print("Hello {0} number {1}".format(world, x))
+}}}
+
+{{{class="c"
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello World.\n");
+    return 0;
+}
+
+}}}
+
+`hello world, this is plain text`
+
+{{{
+this is plain text, render by highlight.js
+}}}

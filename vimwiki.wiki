@@ -1,0 +1,9 @@
+使用 rsync 把 vimwiki 页面同步到服务器的命令
+{{{
+rsync -avz --exclude=".*" -e 'ssh -p 22' /path/to/vimwiki_html/ username@wiki_server:/path/to/wiki
+}}}
+* -a 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD
+* -v 详细输出信息
+* -z 传输过程中压缩数据
+* -e 指定替代 rsh 的 shell 程序
+* --exclude=".*" 不同步以 '.' 开头的隐藏文件

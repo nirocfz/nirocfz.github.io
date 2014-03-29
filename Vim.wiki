@@ -1,0 +1,7 @@
+
+=== 插件 ===
+[[vimwiki]]
+
+=== Tips ===
+* 在以普通用户打开的 vim 中保存一个 root 用户文件<br/>
+    `:w !sudo tee %`
