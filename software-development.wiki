@@ -4,6 +4,6 @@
 
 [[Vim]]
 
-[[tools-for-coder|开发相关工具]]
+[[bookmarks-tools-for-coder|开发相关工具书签]]
 
 [[code|代码]]
