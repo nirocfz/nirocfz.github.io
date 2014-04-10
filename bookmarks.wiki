@@ -3,3 +3,5 @@
 [[funny-stuff|小玩意]]
 
 [[bookmarks-tools-for-coder|开发相关工具书签]]
+
+[[where-to-buy|买东西]]

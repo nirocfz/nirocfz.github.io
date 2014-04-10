@@ -9,9 +9,17 @@
 {{http://noodles-wiki.qiniudn.com/image/libevent-benchmark2.jpg|libevent benchmark|style="max-width:100%"}}
 
 有大量(大于 1000)的 socket 需要观察时，`epoll` 的性能绝对比 `select` 好很多，当要观察的 socket 很少时，就不是这样了，
-`epoll` 的实现比较复杂，这时使用 `select` 比使用 `epoll` 效率应该会更高一些。
+`epoll` 的实现比较复杂，这时使用 `select` 比使用 `epoll` 效率或许会更高一些。
+
+这些开源的项目使用 `select`, 应该还有一个原因是为了可移植性。
 
 ----
 
 * [[http://taohui.org.cn/|陶辉的分享网站]]
     [[http://book.douban.com/subject/22793675/|《深入理解 Ningx》]] 作者的博客，[[http://taohui.org.cn/category/tcp_perf/|高性能网络编程]]系列文章，受益匪浅。
+
+----
+
+获取各个网卡地址，逐个调用 socket，绑定，与绑定 INADDR_ANY 的区别(内核里的区别，性能区别)
+
+只有一个 socket 要观察，还有没有必要使用 `select`, `epoll` 等接口

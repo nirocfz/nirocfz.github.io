@@ -14,7 +14,8 @@
 
 ==== IP 相关 ====
 * [[http://ip138.com|IP138]]
-* [[http://ipseeker.cn/|界面很蹉的“IP地址探索者”]]
+* [[http://ip.cn|IP.cn]] `curl ip.cn` 或 `curl ip.cn/1.1.1.1` 就可以獲得本機外網或者指定 IP 的地理位置 `curl ip.cn` 或 `curl ip.cn/1.1.1.1` 就可以獲得本機外網或者指定 IP 的地理位置。到網頁上去查，還有其他功能,跟 [[http://ip138.com|IP138]] 功能類似
+* 界面很蹉的[[http://ipseeker.cn/|“IP地址探索者”]]
 * 新浪接口 http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=1.1.1.1
 * [[http://ip.taobao.com/|淘宝IP地址库]]
 * [[http://tool.17mon.cn/|17MON网络工具集]] [[http://tool.17mon.cn/ipgeo.php|IP 数据库分享计划]]

@@ -5,8 +5,9 @@
 可以从下面几个链接比较系统地学习:
 
 * [[http://go-tour-zh.appspot.com/|Go 指南]]  中文版的 go-tour
-* [[https://github.com/qyuhen/book|Go 学习笔记]]  这还有其他两本 C 和 Python 的学习笔记
+* [[https://gobyexample.com|Go by Example]]
 * [[https://github.com/astaxie/build-web-application-with-golang|Go Web 编程]]
+* [[https://github.com/qyuhen/book|Go 学习笔记]]  这还有其他两本 C 和 Python 的学习笔记
 
 ----
 

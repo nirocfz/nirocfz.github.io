@@ -1,4 +1,4 @@
 [[http://flukeout.github.io|学习 CSS 选择器的小游戏]]
 
-[[http://zh.learnlayout.com/|学习 CSS 布局]] 好像很不错的 CSS
+[[http://zh.learnlayout.com/|学习 CSS 布局]] 好像很不错的 CSS 教程
 
