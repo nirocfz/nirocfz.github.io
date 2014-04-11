@@ -1,4 +1,4 @@
-%title 码农相关
+%title 技术相关
 
 [[Ubuntu]]
 
@@ -13,3 +13,5 @@
 [[Go]]
 
 [[network-programming|网络编程]]
+
+[[Tips]]

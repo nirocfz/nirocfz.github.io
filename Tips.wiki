@@ -1,0 +1,18 @@
+==== dig 输出“干净”的结果 ====
+
+{{{
+dig +noall +answer wiki.mark42.net
+wiki.mark42.net.	566	IN	A	116.251.209.185
+}}}
+
+{{{
+dig +noall +answer mark42.net ns
+
+mark42.net.        231 IN  NS  ns4.dnsv5.com.
+mark42.net.        231 IN  NS  ns3.dnsv5.com.
+}}}
+
+域名放在 dig 的参数后面，参数顺序也不要变，因为后面的参数“覆盖”前面的参数。
+当 `dig +short` 输出的信息不够，并且需要批量处理一些东西时，这样的输出结果应该更方便操作
+
+

@@ -20,4 +20,4 @@
 
 [[things-worth-paying-for|好东西]]
 
-[[software-development|码农]]
+[[software-development|技术]]

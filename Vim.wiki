@@ -3,7 +3,7 @@
 === 插件 ===
 [[vimwiki]]
 
-=== Tips ===
+=== Vim Tips ===
 * 在以普通用户打开的 vim 中保存一个 root 用户文件<br/>
     `:w !sudo tee %`
 * Linux 编译参数
