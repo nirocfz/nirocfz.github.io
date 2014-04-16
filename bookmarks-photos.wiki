@@ -1,0 +1,10 @@
+%title 图片/照片
+
+看好图片，好照片的网站
+
+* [[http://unsplash.com/|Unsplash]] 在 tumblr 开的照片站
+* [[http://www.gratisography.com/|Gratisography]] 漂亮的高分辨率图片，都是免费的
+* [[http://picjumbo.com/|picjumbo]] 好像是每日一图片，同样高分辨率，免费
+
+=== 壁纸 ===
+* [[http://wallbase.cc/|Wallbase.cc]] 太他妈时尚了这壁纸站
