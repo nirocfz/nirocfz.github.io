@@ -1,3 +1,4 @@
+%template index
 %title Noodles 的维基
 
 ==== 为什么使用 vimwiki ====

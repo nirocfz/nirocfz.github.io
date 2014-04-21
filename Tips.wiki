@@ -16,3 +16,30 @@ mark42.net.        231 IN  NS  ns3.dnsv5.com.
 当 `dig +short` 输出的信息不够，并且需要批量处理一些东西时，这样的输出结果应该更方便操作
 
 
+==== yum 安装指定版本的包 ====
+===== 场景: =====
+
+为了编译一个内核模块，需要安装 kernel-devel, 执行 `yum install kernel-devel`, 安装之后仍然无法编译内核模块。
+
+因为内核版本与 kernel-devel 版本不一致，内核是旧版的，可能因为一些原因不能升级内核，这时需要安装旧版本的 kernel-devel。
+
+`uname -r` 结果是 `2.6.32-431.el6.x86_64`, `/usr/src/kernel/` 目录里的是 `2.6.32-431.11.2.el6.x86_64`
+
+===== 步骤: =====
+
+# 查看这个包都有哪些版本 `yum --showduplicates list kernel-devel`,  找到跟内核版本一致的包
+{{{
+[vagrant@vagrant-centos65 kernels]$ yum --showduplicates list kernel-devel
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Installed Packages
+kernel-devel.x86_64               2.6.32-431.11.2.el6                   @updates
+Available Packages
+kernel-devel.x86_64               2.6.32-431.el6                        base    
+kernel-devel.x86_64               2.6.32-431.1.2.0.1.el6                updates 
+kernel-devel.x86_64               2.6.32-431.3.1.el6                    updates 
+kernel-devel.x86_64               2.6.32-431.5.1.el6                    updates 
+kernel-devel.x86_64               2.6.32-431.11.2.el6                   updates
+}}}
+# 删除已安装的 kernel-devel `sudo yum remove kernel-devel`
+# 安装旧版 `sudo yum install kernel-devel-2.6.32-431.el6`
