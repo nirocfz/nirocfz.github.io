@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='zh-CN'>
 <head>
-<title>Go - Noodles 的维基</title>
+<title>Tips - Noodles 的维基</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="static/css/bootstrap.min.css" media="screen" rel="stylesheet" type='text/css'>
@@ -40,40 +40,71 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="page-header">
-                <h2>Go</h2>
+                <h2>Tips</h2>
             </div>
             <div class="bs-component">
                 
-<p>
-可以从下面几个链接比较系统地学习:
-</p>
+<h4 id="toc_0.0.0.1">dig 输出“干净”的结果</h4>
 
-<ul>
-<li>
-<a href="http://go-tour-zh.appspot.com/">Go 指南</a>  中文版的 go-tour
+<pre>
+dig +noall +answer wiki.mark42.net
+wiki.mark42.net.	566	IN	A	116.251.209.185
+</pre>
 
-<li>
-<a href="https://github.com/mikespook/Learning-Go-zh-cn">学习 Go 语言</a>
+<pre>
+dig +noall +answer mark42.net ns
 
-<li>
-<a href="https://gobyexample.com">Go by Example</a>
-
-<li>
-<a href="https://github.com/astaxie/build-web-application-with-golang">Go Web 编程</a>
-
-<li>
-<a href="https://github.com/qyuhen/book">Go 学习笔记</a>  这还有其他两本 C 和 Python 的学习笔记
-
-</ul>
+mark42.net.        231 IN  NS  ns4.dnsv5.com.
+mark42.net.        231 IN  NS  ns3.dnsv5.com.
+</pre>
 
 <p>
- <a href="Go-basic.html">Go 基础</a> 这是 Go 的基础语法里与 C 不一样的地方
+域名放在 dig 的参数后面，参数顺序也不要变，因为后面的参数“覆盖”前面的参数。
+当 <code>dig +short</code> 输出的信息不够，并且需要批量处理一些东西时，这样的输出结果应该更方便操作
 </p>
 
-<h4 id="toc_0.0.0.1">资源</h4>
+
+<h4 id="toc_0.0.0.2">yum 安装指定版本的包</h4>
+<h5 id="toc_0.0.0.2.1">场景:</h5>
+
 <p>
-<a href="https://github.com/codegangsta/gin">gin</a> 可以自动重新加载 Go 代码的工具
+为了编译一个内核模块，需要安装 kernel-devel, 执行 <code>yum install kernel-devel</code>, 安装之后仍然无法编译内核模块。
 </p>
+
+<p>
+因为内核版本与 kernel-devel 版本不一致，内核是旧版的，可能因为一些原因不能升级内核，这时需要安装旧版本的 kernel-devel。
+</p>
+
+<p>
+<code>uname -r</code> 结果是 <code>2.6.32-431.el6.x86_64</code>, <code>/usr/src/kernel/</code> 目录里的是 <code>2.6.32-431.11.2.el6.x86_64</code>
+</p>
+
+<h5 id="toc_0.0.0.2.2">步骤:</h5>
+
+<ol>
+<li>
+查看这个包都有哪些版本 <code>yum --showduplicates list kernel-devel</code>,  找到跟内核版本一致的包
+<pre>
+[vagrant@vagrant-centos65 kernels]$ yum --showduplicates list kernel-devel
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Installed Packages
+kernel-devel.x86_64               2.6.32-431.11.2.el6                   @updates
+Available Packages
+kernel-devel.x86_64               2.6.32-431.el6                        base    
+kernel-devel.x86_64               2.6.32-431.1.2.0.1.el6                updates 
+kernel-devel.x86_64               2.6.32-431.3.1.el6                    updates 
+kernel-devel.x86_64               2.6.32-431.5.1.el6                    updates 
+kernel-devel.x86_64               2.6.32-431.11.2.el6                   updates
+</pre>
+
+<li>
+删除已安装的 kernel-devel <code>sudo yum remove kernel-devel</code>
+
+<li>
+安装旧版 <code>sudo yum install kernel-devel-2.6.32-431.el6</code>
+
+</ol>
 
             </div>
             <footer>
