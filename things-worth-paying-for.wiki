@@ -1,11 +1,9 @@
 %title 好东西
 
-==== 免费 ====
 * Mou
 * Wikipedia
 * Nginx
 * [[Vim]]
 
-==== 的确要钱的 ====
 * Kindle
 * [[iPhone]]
