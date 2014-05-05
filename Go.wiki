@@ -8,5 +8,5 @@
 
  [[Go-basic|Go 基础]] 这是 Go 的基础语法里与 C 不一样的地方
 
-==== 资源 ====
+=== 资源 ===
 [[https://github.com/codegangsta/gin|gin]] 可以自动重新加载 Go 代码的工具

@@ -1,4 +1,4 @@
-==== dig 输出“干净”的结果 ====
+=== dig 输出“干净”的结果 ===
 
 {{{
 dig +noall +answer wiki.mark42.net
@@ -16,8 +16,8 @@ mark42.net.        231 IN  NS  ns3.dnsv5.com.
 当 `dig +short` 输出的信息不够，并且需要批量处理一些东西时，这样的输出结果应该更方便操作
 
 
-==== yum 安装指定版本的包 ====
-===== 场景: =====
+=== yum 安装指定版本的包 ===
+==== 场景: ====
 
 为了编译一个内核模块，需要安装 kernel-devel, 执行 `yum install kernel-devel`, 安装之后仍然无法编译内核模块。
 
@@ -25,7 +25,7 @@ mark42.net.        231 IN  NS  ns3.dnsv5.com.
 
 `uname -r` 结果是 `2.6.32-431.el6.x86_64`, `/usr/src/kernel/` 目录里的是 `2.6.32-431.11.2.el6.x86_64`
 
-===== 步骤: =====
+==== 步骤: ====
 
 # 查看这个包都有哪些版本 `yum --showduplicates list kernel-devel`,  找到跟内核版本一致的包
 {{{
