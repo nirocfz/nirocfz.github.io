@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /static/
+
+Sitemap: http://wiki.mark42.net/sitemap.xml
