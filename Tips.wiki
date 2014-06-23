@@ -43,3 +43,20 @@ kernel-devel.x86_64               2.6.32-431.11.2.el6                   updates
 }}}
 # 删除已安装的 kernel-devel `sudo yum remove kernel-devel`
 # 安装旧版 `sudo yum install kernel-devel-2.6.32-431.el6`
+
+
+=== Cent OS 系统保存 iptables 规则 ===
+`sudo service iptables save`
+输出
+
+`iptables: Saving firewall rules to /etc/sysconfig/iptables:[  OK  ]`
+
+=== stat file ===
+{{{
+Access: 2014-06-09 10:30:55.395091685 +0800
+Modify: 2014-05-16 18:23:40.151899468 +0800
+Change: 2014-05-16 18:23:40.179899469 +0800
+}}}
+* Access 是文件最近一次被访问的时间
+* Modify 是文件内容最近一次被修改的时间
+* Change 是文件树形最近一次被修改的时间

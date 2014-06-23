@@ -5,7 +5,7 @@
 * [[http://quirktools.com/screenfly|Screenfly]]
 
 === 网站测速 ===
-* 多种测试(http, ping, dns, trace)
+* 多种测试 (http, ping, dns, trace)
     * [[http://alibench.com|阿里测]] 不知道跟阿里巴巴有没有关系
     * [[http://17ce.com|17CE]]
 * DNS
@@ -14,11 +14,11 @@
 
 === IP 相关 ===
 * [[http://ip138.com|IP138]]
-* [[http://ip.cn|IP.cn]] `curl ip.cn` 或 `curl ip.cn/1.1.1.1` 就可以获得本机外网或者指定 IP 的地理位置。到网页上去查，还有其他功能,跟 [[http://ip138.com|IP138]] 功能类似
-* 界面很蹉的[[http://ipseeker.cn/|“IP地址探索者”]]
+* [[http://ip.cn|IP.cn]] `curl ip.cn` 或 `curl ip.cn/1.1.1.1` 就可以获得本机外网或者指定 IP 的地理位置。到网页上去查，还有其他功能，跟 [[http://ip138.com|IP138]] 功能类似
+* 界面很蹉的[[http://ipseeker.cn/|“IP 地址探索者”]]
 * 新浪接口 http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=1.1.1.1
-* [[http://ip.taobao.com/|淘宝IP地址库]]
-* [[http://tool.17mon.cn/|17MON网络工具集]] [[http://tool.17mon.cn/ipgeo.php|IP 数据库分享计划]]
+* [[http://ip.taobao.com/|淘宝 IP 地址库]]
+* [[http://tool.17mon.cn/|17MON 网络工具集]] [[http://tool.17mon.cn/ipgeo.php|IP 数据库分享计划]]
 
 === 开发工具 ===
 * https://www.shortcutfoo.com 练习 [[vim]], sublime, emacs, textmate, command line, git 等各自工具的操作
