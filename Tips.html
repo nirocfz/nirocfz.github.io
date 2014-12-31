@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="static/css/style.css" media="screen" type="text/css">
+<link rel="stylesheet" href="static/highlight/styles/solarized_dark.css">
 </head>
 <body>
 <header id="header"> <div class="meta inner">
@@ -29,9 +30,10 @@
                     </header>
                     <div class="entry">
                         
+
 <h3 id="toc_0.0.1">dig 输出“干净”的结果</h3>
 
-<pre>
+<pre class="bash">
 dig +noall +answer wiki.mark42.net
 wiki.mark42.net.	566	IN	A	116.251.209.185
 </pre>
@@ -69,7 +71,7 @@ mark42.net.        231 IN  NS  ns3.dnsv5.com.
 <ol>
 <li>
 查看这个包都有哪些版本 <code>yum --showduplicates list kernel-devel</code>,  找到跟内核版本一致的包
-<pre>
+<pre class="bash">
 [vagrant@vagrant-centos65 kernels]$ yum --showduplicates list kernel-devel
 Loaded plugins: fastestmirror
 Loading mirror speeds from cached hostfile
@@ -103,7 +105,7 @@ kernel-devel.x86_64               2.6.32-431.11.2.el6                   updates
 </p>
 
 <h3 id="toc_0.0.4">stat file</h3>
-<pre>
+<pre class="bash">
 Access: 2014-06-09 10:30:55.395091685 +0800
 Modify: 2014-05-16 18:23:40.151899468 +0800
 Change: 2014-05-16 18:23:40.179899469 +0800
@@ -119,6 +121,42 @@ Modify 是文件内容最近一次被修改的时间
 Change 是文件树形最近一次被修改的时间
 
 </ul>
+
+
+<h3 id="toc_0.0.5">用户“私有 hosts 文件”</h3>
+<pre class="bash">
+echo '8.8.8.8 google-dns' &gt;&gt; ~/.hosts
+export HOSTALIASES=~/.hosts
+telnet google-dns 53
+</pre>
+
+<p>
+通过环境变量 <code>HOSTALIASES</code> 指定“私有 hosts 文件”的路径（可以在 .profile, .bashrc 这类文件里设置该变量）
+</p>
+
+<p>
+以下两种情况 <strong>不适用</strong> ：
+</p>
+<ul>
+<li>
+程序在解析域名时没有用 <code>getaddrinfo</code> 或 <code>gethostbyname</code>
+
+<li>
+程序中通过 <code>setuid</code> 以其他用户运行
+
+</ul>
+
+<h3 id="toc_0.0.6">使用 rsync 续传文件</h3>
+<p>
+scp 时如果遇到一些情况导致文件传输过程终端，scp 退出，重新执行 scp 后，会重头开始重新传输。使用 rsync 可以进行断点续传
+</p>
+<pre class="bash">
+rsync --partial --progress --rsh='ssh' /path/to/file user@dsthost:/dst/path/
+</pre>
+
+<p>
+<code>--partial --progress</code> 可以用 <code>-P</code> 来代替
+</p>
 
                     </div>
                 </div>
@@ -138,6 +176,17 @@ Change 是文件树形最近一次被修改的时间
     </div>
 </footer>
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=32074356" charset="UTF-8"></script>
+<script src="http://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="static/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+        $('pre').each(function(i, e) {hljs.highlightBlock(e)});
+        });
+hljs.configure({
+languages: []
+})
+hljs.initHighlightingOnLoad();
+</script>
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-37422134-12']);

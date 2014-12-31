@@ -6,8 +6,9 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 
 .hljs {
   display: block;
-  padding: 0.5em;
-  background: #002b36;
+  overflow-x: auto !important;
+  padding: 0.5em !important;
+  background: #002b36 !important;
   color: #839496;
 }
 
